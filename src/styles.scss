@@ -6,3 +6,13 @@
   @include nb-theme-global();
 };
 /* You can add global styles to this file, and also import other style files */
+
+:root{
+  --primary-color:#182dee;
+  --secondary-color:#162328;
+
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}

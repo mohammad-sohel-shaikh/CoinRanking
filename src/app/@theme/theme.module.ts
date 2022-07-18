@@ -23,13 +23,20 @@ import {
   NbTooltipModule,
   NbLayoutModule,
   NbToastrModule,
+  NbTabsetModule,
+  NbMenuItem,
+  // NbIconConfig,
+
 } from '@nebular/theme';
+import { ContentComponent } from './content/content.component';
+
 
 const THEME_MODULE = [
   NbCardModule,
   NbStepperModule,
   NbInputModule,
   NbSidebarModule,
+
   NbMenuModule,
   NbTagModule,
   NbIconModule,
@@ -47,11 +54,15 @@ const THEME_MODULE = [
   NbAutocompleteModule,
   NbTooltipModule,
   NbLayoutModule,
-  NbToastrModule
+  NbToastrModule,
+  NbTabsetModule,
+  // NbIconConfig
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ContentComponent,
+  ],
   imports: [CommonModule, THEME_MODULE],
   exports: [THEME_MODULE],
 })
