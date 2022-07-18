@@ -9,7 +9,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { ThemeModule } from './@theme/theme.module';
-import { NgApexchartsModule } from 'ng-apexcharts';
 import { FooterComponent } from './@theme/footer/footer.component';
 
 @NgModule({
@@ -27,7 +26,6 @@ import { FooterComponent } from './@theme/footer/footer.component';
     NbThemeModule.forRoot({ name: 'default' }),
     NbLayoutModule,
     NbEvaIconsModule,
-    NgApexchartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

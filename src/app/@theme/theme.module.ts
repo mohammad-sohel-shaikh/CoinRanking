@@ -29,6 +29,7 @@ import {
 
 } from '@nebular/theme';
 import { ContentComponent } from './content/content.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 
 const THEME_MODULE = [
@@ -36,7 +37,7 @@ const THEME_MODULE = [
   NbStepperModule,
   NbInputModule,
   NbSidebarModule,
-
+  NgApexchartsModule,
   NbMenuModule,
   NbTagModule,
   NbIconModule,

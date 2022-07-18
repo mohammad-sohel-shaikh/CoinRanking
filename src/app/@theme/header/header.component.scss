@@ -16,7 +16,7 @@ nav li{
   font-weight: bold;
   text-transform: uppercase;
 }
-li > a:after{
+a:after{
   content: '';
   display: block;
   height: 1.5px;
@@ -24,7 +24,7 @@ li > a:after{
   transform: scaleX(0);
   transition: transform .3s;
 }
-li > a:hover:after{
+a:hover:after{
   transform: scaleX(1);
   transition: transform .3s;
 }
