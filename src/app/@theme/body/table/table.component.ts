@@ -18,27 +18,29 @@ export type ChartOptions = {
   stroke: ApexStroke;
   title: ApexTitleSubtitle;
 };
-@Component({
-  selector: 'app-datachart',
-  templateUrl: './datachart.component.html',
-  styleUrls: ['./datachart.component.scss']
-})
-export class DatachartComponent implements OnInit {
-  @ViewChild("chart") chart: ChartComponent | undefined
 
+@Component({
+  selector: 'app-table',
+  templateUrl: './table.component.html',
+  styleUrls: ['./table.component.scss']
+})
+export class TableComponent implements OnInit {
+
+  @ViewChild("chart") chart: ChartComponent | undefined
   public chartOptions: Partial<ChartOptions>;
 
-
+  // constructor() { }
   constructor() {
     this.chartOptions = {
       series: [
         {
           name: "Desktops",
-          data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+          data: [10, 41, 35]
         }
       ],
       chart: {
-        height: 250,
+        height: 100,
+        width:100,
         type: "line",
         zoom: {
           enabled: false
@@ -50,10 +52,10 @@ export class DatachartComponent implements OnInit {
       stroke: {
         curve: "straight"
       },
-      title: {
-        text: "Product Trends by Month",
-        align: "left"
-      },
+      // title: {
+      //   text: "Product Trends by Month",
+      //   align: "left"
+      // },
       grid: {
         row: {
           colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
@@ -62,19 +64,15 @@ export class DatachartComponent implements OnInit {
       },
       xaxis: {
         categories: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
+
           "May",
           "Jun",
-          "Jul",
-          "Aug",
-          "Sep"
+          "Jul"
         ]
       }
     };
    }
+
 
   ngOnInit(): void {
   }

@@ -10,6 +10,8 @@ import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { ThemeModule } from './@theme/theme.module';
 import { FooterComponent } from './@theme/footer/footer.component';
+import { TableComponent } from './@theme/body/table/table.component';
+
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { FooterComponent } from './@theme/footer/footer.component';
     BodyComponent,
     HeaderComponent,
     FooterComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
