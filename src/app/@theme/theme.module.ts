@@ -1,3 +1,4 @@
+import { HeaderComponent } from './header/header.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
@@ -25,11 +26,15 @@ import {
   NbToastrModule,
   NbTabsetModule,
   NbMenuItem,
+  NbButtonGroupModule
   // NbIconConfig,
 
 } from '@nebular/theme';
 import { ContentComponent } from './content/content.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { DatachartComponent } from './content/datachart/datachart.component';
+
+HeaderComponent
 
 
 const THEME_MODULE = [
@@ -57,12 +62,14 @@ const THEME_MODULE = [
   NbLayoutModule,
   NbToastrModule,
   NbTabsetModule,
+  NbButtonGroupModule,
   // NbIconConfig
 ];
 
 @NgModule({
   declarations: [
     ContentComponent,
+    DatachartComponent,
   ],
   imports: [CommonModule, THEME_MODULE],
   exports: [THEME_MODULE],

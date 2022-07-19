@@ -6,10 +6,15 @@ body {
 h1 {
 text-align: center;
 }
+.social-menu{
+  // top: 25%;
+  margin-left: 30%;
+  margin-top: 10px;
+}
 .social-menu ul {
   position: sticky;
-  top: 100%;
-  left: 50%;
+  // top: 100%;
+  // left: 20%;
   transform: translate(-50%, -50%);
   padding: 0;
   margin: 0;

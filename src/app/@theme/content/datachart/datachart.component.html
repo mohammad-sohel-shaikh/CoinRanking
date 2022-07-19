@@ -1,0 +1,57 @@
+<div class="container">
+
+  <div class="chartprice">
+    <nb-card>
+    <nb-card-body id="chart">
+      <nav class="navbar navbar-expand-lg navbar-light navcontent" widht="100%">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-30">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="" routerLinkActive="active-link">Overview</a>
+            <!-- [routerLinkActiveOptions]="{exact:true} -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="datafetch" routerLinkActive="active-link">Market</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="watchlist" routerLinkActive="active-link">Wallet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " routerLink="contact" tabindex="-1"  routerLinkActive="active-link">routing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " routerLink="contact" tabindex="-1"  routerLinkActive="active-link">Price Estimates</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- <nb-card>
+      <nb-card-body class="example-items-col">
+        <nb-button-group size="large">
+        <button nbButtonToggle>A</button>
+        <button nbButtonToggle>B</button>
+        <button nbButtonToggle>C</button>
+        <button nbButtonToggle>D</button>
+        <button nbButtonToggle>E</button>
+        <button nbButtonToggle>F</button>
+      </nb-button-group>
+    </nb-card-body>
+  </nb-card> -->
+
+  <apx-chart
+  [series]="chartOptions.series"
+  [chart]="chartOptions.chart"
+  [xaxis]="chartOptions.xaxis"
+  [dataLabels]="chartOptions.dataLabels"
+  [grid]="chartOptions.grid"
+  [stroke]="chartOptions.stroke"
+  [title]="chartOptions.title"
+  ></apx-chart>
+
+</nb-card-body>
+</nb-card>
+</div>
+
+</div>
+

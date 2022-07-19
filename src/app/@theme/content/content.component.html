@@ -3,40 +3,56 @@
 <div class="container">
   <img
     src="https://cdn.coinranking.com/assets/64374966bb4cd0691a9429341ae9b413.svg"
-    width="28"
-    height="28"
+    width="40"
+    height="40"
     alt="Coinranking cryptocurrency prices"
     class="logo__img"
   />
-  <span>Ethereum</span>
-  <h1>$2,400.80</h1>
+  <span class="coinName">Ethereum</span>
+  <h1 class="mainPrice">$2,400.80</h1>
+
+  <!-- tage -->
   <p>Tages</p>
 
-  <nb-card>
-    <nb-card-body>
-      A nebula is an interstellar cloud of dust, hydrogen, helium and other
-      ionized gases. Originally, nebula was a name for any diffuse astronomical
-      object, including galaxies beyond the Milky Way.
-    </nb-card-body>
-  </nb-card>
+  <nb-tag-list class="tages">
+    <nb-tag status="basic" appearance="outline" text="Mineable"></nb-tag>
+    <nb-tag status="basic" appearance="outline" text="PoW"></nb-tag>
+    <nb-tag status="basic" appearance="outline" text="Smart contracts"></nb-tag>
+    <nb-tag status="basic" appearance="outline" text="Etherium"></nb-tag>
+  </nb-tag-list>
 
-  <!-- <nb-card>
-    <nb-menu [items]="items">
-    </nb-menu>
-  </nb-card> -->
+
+  <div class="middlepart">
+
+    <nb-card class="card">
+      <nb-card-body>
+        <p class="cardheader">Market cap</p>
+        <h4 class="mt-5 ml-5"><span class="gray">$ </span>27580894</h4>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card class="card">
+      <nb-card-body>
+        <p class="cardheader">Fully Diluted</p>
+        <h4 class="mt-5 ml-5"><span class="gray">$ </span>27580894</h4>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card class="card">
+      <nb-card-body>
+        <p class="cardheader">Volume</p>
+        <h4 class="mt-5 ml-5"><span class="gray">$ </span>27580894</h4>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card class="card">
+      <nb-card-body>
+        <p class="cardheader">Circulating  supply</p>
+        <h4 class="mt-5 ml-5"><span class="gray">$ </span>27580894</h4>
+      </nb-card-body>
+    </nb-card>
+
+  </div>
 </div>
-<nb-card>
-  <nb-card-body>
-    <div id="chart">
-      <apx-chart
-        [series]="chartOptions.series"
-        [chart]="chartOptions.chart"
-        [xaxis]="chartOptions.xaxis"
-        [dataLabels]="chartOptions.dataLabels"
-        [grid]="chartOptions.grid"
-        [stroke]="chartOptions.stroke"
-        [title]="chartOptions.title"
-      ></apx-chart>
-    </div>
-  </nb-card-body>
-</nb-card>
+<!--  chart -->
+<app-datachart></app-datachart>

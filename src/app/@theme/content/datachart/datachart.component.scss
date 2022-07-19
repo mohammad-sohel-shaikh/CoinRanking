@@ -1,0 +1,32 @@
+.navbar-light .navbar-nav .nav-link.active-link{
+
+  color:var(--primary-color);
+
+}
+.navbar-light .navbar-nav .nav-link{
+
+  color:var(--secondary-color);
+}
+
+ul a:hover{
+color: var(--primary-color) !important;
+}
+nav li{
+  text-align: center;
+  font-weight: 300px;
+  text-transform: uppercase;
+}
+a:after{
+  content: '';
+  display: block;
+  height: 1.5px;
+  background: var(--primary-color);
+  transform: scaleX(0);
+  transition: transform .3s;
+}
+a:hover:after{
+  transform: scaleX(1);
+  transition: transform .3s;
+}
+
+
