@@ -9,6 +9,7 @@ import {
   ApexStroke,
   ApexGrid
 } from "ng-apexcharts";
+import { ContentComponent } from '../content.component';
 export type ChartOptions = {
   series: ApexAxisChartSeries;
   chart: ApexChart;
@@ -24,17 +25,19 @@ export type ChartOptions = {
   styleUrls: ['./datachart.component.scss']
 })
 export class DatachartComponent implements OnInit {
-  @ViewChild("chart") chart: ChartComponent | undefined
 
+  sparklinedata:any;
+
+  @ViewChild("chart") chart: ChartComponent | undefined
   public chartOptions: Partial<ChartOptions>;
 
 
-  constructor() {
+  constructor(private contentdata:ContentComponent) {
     this.chartOptions = {
       series: [
         {
           name: "Desktops",
-          data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+          data: this.sparklinedata,
         }
       ],
       chart: {
@@ -74,9 +77,13 @@ export class DatachartComponent implements OnInit {
         ]
       }
     };
-   }
+
+  }
 
   ngOnInit(): void {
+    this.sparklinedata=this.contentdata.userdata[0].sparkline;
+    console.log(this.sparklinedata);
+
   }
 
 }

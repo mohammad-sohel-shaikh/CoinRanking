@@ -26,8 +26,8 @@ export class ContentComponent implements OnInit {
         this.userdata = this.uuiddata.data.coins.filter((value) => {
           return value.uuid == this.uuid;
         });
+        // console.log(this.userdata);
       });
-      console.log(this.userdata);
     }
   }
 }

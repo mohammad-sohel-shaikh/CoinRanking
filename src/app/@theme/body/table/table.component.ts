@@ -40,48 +40,6 @@ export class TableComponent implements OnInit {
       this.coinData=param;
     });
 
-
-    // chart
-    this.chartOptions = {
-      series: [
-        {
-          name: "Desktops",
-          data: [10, 41, 35]
-        }
-      ],
-      chart: {
-        height: 100,
-        width:100,
-        type: "line",
-        zoom: {
-          enabled: false
-        }
-      },
-      dataLabels: {
-        enabled: false
-      },
-      stroke: {
-        curve: "straight"
-      },
-      // title: {
-      //   text: "Product Trends by Month",
-      //   align: "left"
-      // },
-      grid: {
-        row: {
-          colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
-          opacity: 0.5
-        }
-      },
-      xaxis: {
-        categories: [
-
-          "May",
-          "Jun",
-          "Jul"
-        ]
-      }
-    };
    }
 
 

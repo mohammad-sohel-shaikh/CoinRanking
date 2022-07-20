@@ -1,21 +1,19 @@
-<p>{{coinData.data.coins[1].price}}</p>
 <div class="container">
   <table class="table table-hover">
     <thead>
       <tr class="table-header">
+        <th scope="col"></th>
         <th scope="col">All Coin</th>
         <th scope="col">Price</th>
         <th scope="col">Change %</th>
-        <th scope="col">High</th>
-        <th scope="col">Low</th>
         <th scope="col">24Vol</th>
         <th scope="col">24H</th>
-        <th scope="col">chart</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let user of coinData.data.coins;index as i">
-        <td scope="row" [routerLink]="['/body',user.uuid]">
+        <td>{{i+1}}</td>
+        <td [routerLink]="['/body',user.uuid]">
           <img
             src={{user.iconUrl}}
             width="28"
@@ -23,26 +21,16 @@
             alt="Coinranking cryptocurrency prices"
             class="logo__img"
           />
-          <nb-icon icon="star"></nb-icon>{{user.name}}
+          <!-- <nb-icon icon="star"></nb-icon> -->
+          {{user.name}}
         </td>
         <td>{{user.price}}</td>
         <td>
-          <button nbButton outline status="danger" class="border">{{user.change}}</button>
+          <button nbButton outline  status="{{user.change>0 ? 'primary': 'danger'}}" class="border">{{user.change}}</button>
         </td>
-        <td></td>
-        <td>3570.00</td>
-        <td>15035</td>
+        <td>34556</td>
         <td>$54209.974</td>
-        <td>
-          <div class="chart">
-            <apx-chart
-            [series]="chartOptions.series"
-            [chart]="chartOptions.chart"
-            [dataLabels]="chartOptions.dataLabels"
-            [stroke]="chartOptions.stroke"
-            ></apx-chart>
-          </div>
-          </td>
+
       </tr>
     </tbody>
   </table>
