@@ -34,7 +34,6 @@ import { ContentComponent } from './content/content.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { DatachartComponent } from './content/datachart/datachart.component';
 
-HeaderComponent
 
 
 const THEME_MODULE = [

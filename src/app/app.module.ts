@@ -1,3 +1,4 @@
+import { DataFetchComponent } from './@theme/data-fetch/data-fetch.component';
 import { HeaderComponent } from './@theme/header/header.component';
 import { BodyComponent } from './@theme/body/body.component';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,11 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { ThemeModule } from './@theme/theme.module';
 import { FooterComponent } from './@theme/footer/footer.component';
 import { TableComponent } from './@theme/body/table/table.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+
+
+
 
 
 @NgModule({
@@ -20,6 +26,7 @@ import { TableComponent } from './@theme/body/table/table.component';
     HeaderComponent,
     FooterComponent,
     TableComponent,
+    DataFetchComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +36,8 @@ import { TableComponent } from './@theme/body/table/table.component';
     NbThemeModule.forRoot({ name: 'default' }),
     NbLayoutModule,
     NbEvaIconsModule,
+    HttpClientModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

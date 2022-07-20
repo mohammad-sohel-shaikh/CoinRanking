@@ -5,9 +5,9 @@ import { BodyComponent } from './@theme/body/body.component';
 import { ContentComponent } from './@theme/content/content.component';
 
 const routes: Routes = [
-  {path:'',component:BodyComponent},
+  {path:'body',component:BodyComponent},
+  {path:'body/:uuid',component:ContentComponent},
   {path:'datafetch',component:DataFetchComponent},
-  {path:'watchlist',component:ContentComponent},
   // {path:'',component:HeaderComponent}
 ];
 

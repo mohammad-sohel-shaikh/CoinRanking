@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  url:'https://coinranking1.p.rapidapi.com/coin/Qwsogvtv82FCd/price',
+  // url:'https://coinranking1.p.rapidapi.com/coin/Qwsogvtv82FCd/price',
+  url: 'https://coinranking1.p.rapidapi.com/coin/Qwsogvtv82FCd',
+  params: {referenceCurrencyUuid: 'yhjMzLPhuIDl', timePeriod: '24h'},
   headers: {
     'X-RapidAPI-Key': '86733f4be8msh687166c46bd6b7cp10ee1djsn35f9fee51666',
     'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'

@@ -1,4 +1,7 @@
+import { FetchdataService } from './../../service/fetchdata.service';
 import { Component, OnInit,ViewChild } from '@angular/core';
+
+
 import {
   ChartComponent,
   ApexAxisChartSeries,
@@ -29,8 +32,16 @@ export class TableComponent implements OnInit {
   @ViewChild("chart") chart: ChartComponent | undefined
   public chartOptions: Partial<ChartOptions>;
 
-  // constructor() { }
-  constructor() {
+
+  coinData:any;
+  constructor(private service:FetchdataService) {
+    // data from api
+    this.service.users().subscribe(param=>{
+      this.coinData=param;
+    });
+
+
+    // chart
     this.chartOptions = {
       series: [
         {
@@ -75,6 +86,7 @@ export class TableComponent implements OnInit {
 
 
   ngOnInit(): void {
+
   }
 
 }
